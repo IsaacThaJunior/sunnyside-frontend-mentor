@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark-cyan: hsl(167, 40%, 24%);
+  --dark-blue: hsl(198, 62%, 26%);
+  --dark-moderate-cyan: hsl(168, 34%, 41%);
+  --moderate-cyan: hsl(165, 43%, 65%);
+
+  --very-dark-des-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* The body's design*/
+body {
+  width: 100%;
+  font-family: Barlow, sans-serif;
+  height: 100vh;
+  display: grid;
+  /* grid-template-rows: 1fr repeat(2, .5fr) minmax(300px, 100rem) 1.5fr 1fr 1fr; */
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'header header'
+    'transform egg'
+    'cup stand'
+    'graphic photo'
+    'testimonials testimonials'
+    'just-pics just-pics'
+    'footer footer';
+}
+
+#header {
+  background: skyblue url('images/desktop/image-header.jpg');
+  background-position: center top;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  grid-area: header;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: inherit;
+}
+
+.arrow {
+  width: 10px;
+}
+
+#transform {
+  grid-area: transform;
+  width: 100%;
+}
+
+#egg {
+  grid-area: egg;
+  width: 100%;
+}
+
+#cup {
+  grid-area: cup;
+  width: 100%;
+}
+
+#stand {
+  grid-area: stand;
+  width: 100%;
+}
+
+#graphic {
+  grid-area: graphic;
+  background: url('images/desktop/image-graphic-design.jpg');
+  background-position: center top;
+  background-size: cover;
+  color: var(--dark-cyan);
+  padding: 20rem 1rem 4rem 1rem;
+}
+
+#photo {
+  background-image: url(/images/desktop/image-photography.jpg);
+  background-position: center top;
+  background-size: cover;
+  color: var(--dark-cyan);
+  padding: 20rem 1rem 4rem 1rem;
+  grid-area: photo;
+}
+
+#testimonials {
+  grid-area: testimonials;
+  width: 100%;
+}
+
+#just-pics {
+  grid-area: just-pics;
+  display: flex;
+  width: 100%;
+}
+
+.pics {
+  width: 25%;
+}
+
+#footer {
+  grid-area: footer;
+  width: 100%;
+}
