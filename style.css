@@ -22,7 +22,7 @@
 /* The body's design*/
 body {
   width: 100%;
-  font-family: Barlow, sans-serif;
+  font-family: 'Barlow', sans-serif;
   height: 100vh;
   display: grid;
   /* grid-template-rows: 1fr repeat(2, .5fr) minmax(300px, 100rem) 1.5fr 1fr 1fr; */
@@ -38,28 +38,94 @@ body {
     'footer footer';
 }
 
+h1, h2, h3, h4{
+    font-family: 'Fraunces', sans-serif;
+}
+
+/*the header*/
+
 #header {
-  background: skyblue url('images/desktop/image-header.jpg');
+  background: #23BFFF url('images/desktop/image-header.jpg');
   background-position: center top;
-  background-size: cover;
-  color: white;
-  height: 100vh;
+    background-repeat: no-repeat;
+  background-size: contain;
+  height: 70vh;
   grid-area: header;
+    padding: 1rem;
+        color: white;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   width: inherit;
+
+}
+
+#centered{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 1.5rem 0 0;
 }
 
 .arrow {
-  width: 10px;
+  width: 15px;
 }
+#topic{
+    padding: 1rem .5rem 2rem;
+}
+
+
+#nav-items a{
+    padding:.5rem 1rem;
+    text-decoration: none;
+    font-size: .8rem;
+}
+
+.white{
+    color: white;
+}
+
+.selected{
+    background-color: white;
+    border-radius: 50px;
+    color: black;
+    margin-left: .5rem;
+}
+
+/* the grid parts with 2 column layout*/
 
 #transform {
   grid-area: transform;
   width: 100%;
+    text-align: left;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#transform h2, #stand h2{
+    font-weight: 900;
+    padding: 2rem 0;
+    color: var(--very-dark-des-blue);
+}
+
+#transform p, #stand p{
+    color: var(--grayish-blue);
+    padding: 0 0 1rem;
+}
+
+.learn{
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem .1rem;
+    text-transform: uppercase;
+    color: var(--very-dark-des-blue);
+    font-size: .8rem;
+    font-family: 'Fraunces', sans-serif;
 }
 
 #egg {
@@ -75,6 +141,11 @@ nav {
 #stand {
   grid-area: stand;
   width: 100%;
+   text-align: left;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #graphic {
@@ -83,21 +154,91 @@ nav {
   background-position: center top;
   background-size: cover;
   color: var(--dark-cyan);
-  padding: 20rem 1rem 4rem 1rem;
+    padding: 15rem 5rem 1rem;
+    text-align: center;
 }
 
 #photo {
-  background-image: url(/images/desktop/image-photography.jpg);
+  background-image: url(images/desktop/image-photography.jpg);
   background-position: center top;
   background-size: cover;
-  color: var(--dark-cyan);
-  padding: 20rem 1rem 4rem 1rem;
+  color: var(--dark-blue);
+  padding: 15rem 5rem 1rem;
+    text-align: center;
   grid-area: photo;
 }
+
+#photo h3, #graphic h3{
+    padding: .5rem 0 1.5rem;
+    font-weight: 900;
+}
+#photo p, #graphic p{
+    font-size: .8rem;
+    line-height: 1.2rem;
+    opacity: 80%;
+}
+
+/* The testimonials */
 
 #testimonials {
   grid-area: testimonials;
   width: 100%;
+}
+
+#client{
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0 1rem;
+}
+#client h3{
+    color: var(--grayish-blue);
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: .9rem;
+}
+
+#testimony{
+    display: flex;
+    padding: 1rem 1rem 4rem;
+}
+
+.witness{
+    padding: .5rem;
+}
+
+.img-holder{
+     display: flex;
+    justify-content: center;
+    padding: 0 0 2rem;
+}
+.witness-pic{
+    width: 60px;
+   border-radius: 50%;
+}
+
+.word{
+    color: var(--very-dark-des-blue);
+      font-size: .8rem;
+    line-height: 1.2rem;
+    opacity: 90%;
+    padding: 0 0 1rem 0;
+    text-align: center;
+}
+
+.tags{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name{
+    font-size: .9rem;
+    padding: 1rem 0 0;
+}
+.job{
+    color: var(--grayish-blue);
+      font-size: .8rem;
+    padding: .5rem;
 }
 
 #just-pics {
@@ -108,9 +249,36 @@ nav {
 
 .pics {
   width: 25%;
+    height: 300px;
 }
 
 #footer {
   grid-area: footer;
   width: 100%;
+    background-color: var(--moderate-cyan);
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer h3{
+    font-weight: 900;
+    color: var(--dark-cyan);
+    padding: 1rem;
+}
+
+#footer-nav a{
+    color: var(--dark-cyan);
+    padding:  1.5rem 1rem 1.2rem;
+    text-decoration: none;
+    font-size: .8rem;
+    opacity: 60%;
+}
+
+/*the attribution*/
+.attribution{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end
 }
